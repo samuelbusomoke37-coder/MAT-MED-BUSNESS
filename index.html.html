@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAT MED LUBUMBASHI | Manassé Busomoke Jonh | Matériel Très Bonne Qualité | Alerte Commande</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial}
+body{background:#f8f9fa;color:#222}
+.topbar{background:linear-gradient(90deg,#582121,#8b0000);color:#fff;text-align:center;padding:9px 15px;font-weight:700;font-size:11px}
+.marquee-bar{background:linear-gradient(90deg,#111,#d40000);color:#fff;overflow:hidden;white-space:nowrap;padding:10px 0;font-weight:900;font-size:14px;letter-spacing:1.2px;border-bottom:2px solid #ffd700}
+.marquee-content{display:inline-block;animation:scroll-left 20s linear infinite;padding-left:100%}
+.marquee-content span{margin-right:100px}
+@keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.header{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;position:sticky;top:0;z-index:99;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.logo-area{display:flex;align-items:center;gap:12px;cursor:pointer}
+.logo-img{width:50px;height:50px;border-radius:12px;object-fit:contain;background:#f5f6f8;border:2px solid #eee;display:flex;align-items:center;justify-content:center;font-size:9px;color:#888;font-weight:800}
+.logo-text{font-weight:900;font-size:21px;line-height:1}.logo-text span{color:#d40000}.logo-sub{font-size:8.5px;color:#777;display:block;font-weight:700;margin-top:2px}
+.search{flex:1;max-width:420px;margin:0 18px;position:relative}.search input{width:100%;padding:10px 15px 10px 38px;border:2px solid #eee;border-radius:30px;font-size:12.5px}.search::before{content:"🔍";position:absolute;left:13px;top:50%;transform:translateY(-50%)}
+.nav{background:#fff;padding:10px 18px;display:flex;gap:8px;overflow:auto;border-bottom:1px solid #eee;position:sticky;top:66px;z-index:98}
+.nav button{white-space:nowrap;padding:10px 16px;border:1px solid #eee;border-radius:25px;font-weight:700;font-size:12px;cursor:pointer;background:#f8f9fa}
+.nav button.active{background:#d40000;color:#fff;border-color:#d40000}
+.nav button.chef-btn{background:#111;color:#fff;margin-left:auto}
+.main{max-width:1380px;margin:14px auto;padding:0 14px}
+.hero{background:linear-gradient(135deg,#d40000 0%,#8b0000 100%);color:#fff;border-radius:16px;padding:26px;margin-bottom:14px;display:flex;flex-wrap:wrap;gap:22px}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:13px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);position:relative;display:flex;flex-direction:column;transition:.25s;border:1px solid #f0f0f0}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.11)}
+.card img{width:100%;height:175px;object-fit:contain;padding:10px;background:#fafafa}
+.badge{position:absolute;top:8px;left:8px;background:#d40000;color:#fff;padding:4px 8px;border-radius:6px;font-size:10px;font-weight:900}
+.card-body{padding:11px;flex:1;display:flex;flex-direction:column}
+.new{color:#d40000;font-weight:900;font-size:14.5px}.old{font-size:11px;color:#999;text-decoration:line-through;margin-left:5px}
+.btn{background:#d40000;color:#fff;border:none;padding:9px;border-radius:25px;font-weight:800;font-size:11px;cursor:pointer;margin-top:6px}
+.btn-wa{background:#25D366;color:#fff;border:none;padding:7px;border-radius:20px;font-weight:700;font-size:10px;cursor:pointer;margin-top:5px;display:flex;align-items:center;justify-content:center;gap:5px;text-decoration:none}
+.cart-btn{cursor:pointer;font-weight:800;color:#d40000;background:#fff5f5;padding:7px 14px;border-radius:25px;border:1px solid #ffd0d0}
+.cart-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:100}
+.cart-drawer{position:fixed;top:0;right:-420px;width:400px;max-width:92%;height:100%;background:#fff;z-index:101;transition:.35s;display:flex;flex-direction:column}
+.cart-drawer.open{right:0}.cart-overlay.open{display:block}
+.cart-header{padding:15px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;background:#fafafa}
+.cart-items{flex:1;overflow:auto;padding:10px}.cart-footer{padding:15px;border-top:1px solid #eee;background:#fafafa}
+.cart-footer input,.cart-footer select{width:100%;padding:9px;margin:5px 0;border:1px solid #ddd;border-radius:10px;font-size:12px}
+.checkout-btn{width:100%;background:#25D366;color:#fff;border:none;padding:12px;border-radius:30px;font-weight:800;margin-top:10px;cursor:pointer}
+.whatsapp-float{position:fixed;bottom:18px;right:18px;z-index:90;display:flex;flex-direction:column;gap:9px}
+.wa-btn{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:23px;text-decoration:none;color:#fff;box-shadow:0 5px 18px rgba(0,0,0,.25);font-weight:900}
+.page-col{display:none;padding:12px;max-width:1120px;margin:0 auto}.page-col.active{display:block}
+.admin-card{background:#fff;padding:15px;border-radius:14px;margin-bottom:11px;box-shadow:0 2px 10px rgba(0,0,0,.05);border:1px solid #f0f0f0}
+.admin-btn{background:#d40000;color:#fff;font-weight:800;border:none;padding:11px;border-radius:10px;cursor:pointer;width:100%;margin:5px 0}
+.login-box{max-width:380px;margin:55px auto;background:#fff;padding:22px;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.11);text-align:center}
+.stock-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:11px}
+.stock-item{background:#fff;border:2px solid #f0f0f0;border-radius:12px;padding:9px}.stock-item.has-img{border-color:#25D366;background:#f0fff4}
+.stock-item img{width:100%;height:125px;object-fit:contain;background:#fafafa;border-radius:8px}
+.section{background:#fff;border-radius:14px;padding:20px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.04);border:1px solid #f5f5f5}
+.social-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 16px;border-radius:30px;text-decoration:none;font-weight:800;font-size:11.5px;margin:4px}
+.chef-photo{width:130px;height:130px;border-radius:50%;object-fit:cover;border:4px solid #d40000}
+.chef-photo-accueil{width:90px;height:90px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 3px 12px rgba(0,0,0,.2)}
+.chef-card{background:#fff;border:2px solid #d40000;border-radius:16px;padding:20px;margin:14px 0;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.chef-card-accueil{background:linear-gradient(135deg,#fff,#f8f9fa);border:2px solid #d40000;border-radius:16px;padding:16px;margin:12px 0;display:flex;gap:14px;align-items:center;flex-wrap:wrap;box-shadow:0 4px 18px rgba(212,0,0,.1)}
+.chef-coord{background:#111;color:#fff;border-radius:12px;padding:14px;margin-top:12px}
+.coord-item{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:12px}
+.wa-direct-box{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;border-radius:12px;padding:15px;display:flex;gap:12px;align-items:center;margin:11px 0}
+.qualite-box{background:linear-gradient(135deg,#d40000,#8b0000);color:#fff;border-radius:12px;padding:16px;margin:12px 0;border-left:5px solid #ffd700;display:flex;gap:14px;align-items:center}
+.pro-input{width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;margin:5px 0;font-size:12px}
+.alert-bubble{position:fixed;top:75px;right:10px;background:#d40000;color:#fff;padding:16px 18px;border-radius:14px;box-shadow:0 8px 25px rgba(0,0,0,.4);z-index:200;display:none;min-width:280px;border:2px solid #ffd700;animation:shake 0.5s}
+.alert-bubble.show{display:block}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+</style>
+</head>
+<body>
+<div class="topbar">MAT MED NOTRE BOUTIQUE DES MATERIELS TRES EFFICACE</div>
+<div class="marquee-bar"><div class="marquee-content"><span>MATÉRIEL DE TRÈS BONNE QUALITÉ C'EST NOUS </span></div></div>
+<div class="header"><div class="logo-area" onclick="showSection('accueil',null)"><img id="logoImg" class="logo-img" style="display:none"><div id="logoPlaceholder" class="logo-img">MAT MED</div><div><div class="logo-text">MAT<span>MED</span><span class="logo-sub">MANASSÉ BUSOMOKE • DEPUIS 2019 À NOS JOUR</span></div></div></div><div class="search"><input id="search" placeholder="Rechercher..."></div><div style="display:flex;gap:9px;align-items:center"><div class="cart-btn" onclick="openCart()">🛒 Panier (<span id="cart">0</span>)</div><a href="https://wa.me/243979060998" target="_blank" style="background:#25D366;color:#fff;padding:7px 14px;border-radius:25px;text-decoration:none;font-weight:800;font-size:11px">💬 WhatsApp</a></div></div>
+<div class="nav" id="mainNav"><button class="active" onclick="showSection('accueil',event)">🏠 Accueil</button><button onclick="showSection('diagnostic',event)">🩺 Diagnostic</button><button onclick="showSection('chirurgie',event)">🔪 Chirurgie</button><button onclick="showSection('produitsSec',event)">🛍️ Produits </button><button onclick="showSection('contact',event)">📍 Contact & Chef Manassé</button><button class="chef-btn" onclick="tryAdmin()">🔒 Espace Chef</button></div>
+
+<!-- ALERTE COMMANDE AMÉLIORÉE - SON + VIBRATION + BULLE ROUGE 12 SEC + NOTIFICATION NAVIGATEUR - DÉJÀ INSÉRÉE -->
+<div id="alertBox" class="alert-bubble">
+<div style="font-weight:900;font-size:14px">🚨 NOUVELLE COMMANDE MAT MED!</div>
+<div id="alertText" style="font-size:11px;margin-top:6px;line-height:1.5"></div>
+<div style="margin-top:8px"><a href="#" onclick="switchAdmin();tabA('commandes',null);document.getElementById('alertBox').classList.remove('show');return false;" style="background:#ffd700;color:#111;padding:5px 10px;border-radius:20px;text-decoration:none;font-weight:800;font-size:10px">📦 Voir commande</a></div>
+</div>
+
+<div id="accueil" class="main">
+<div class="qualite-box" id="qualiteBox"><div style="font-size:30px">💯</div><div><div style="font-weight:900;font-size:15px" id="qualiteTitle">MATÉRIEL DE TRÈS BONNE QUALITÉ - Notre Signature Depuis 2019. Vous Ne Serez Pas Déçu.</div><div style="font-size:12px;margin-top:6px;line-height:1.6" id="qualiteDesc">Je suis Manassé Busomoke Jonh, gérant fondateur de MAT MED LUBUMBASHI. Ma promesse est simple: chaque tensiomètre, chaque stéthoscope Littmann, chaque oxymètre que vous achetez est 100% ORIGINAL certifié CE, importé directement d'usine, testé à 100% par mes soins avant livraison, avec facture + garantie 1 an écrite. C'est l'engagement qui a convaincu 3500+ infirmiers, médecins et hôpitaux du Katanga depuis 2018. Note 4.9/5. Contact direct Chef: 0979060998 | manassebusomoke@gmail.com | Facebook: Manassé busomoke jonh</div></div></div>
+<div class="chef-card-accueil" id="chefCardAccueil"><div id="chefAccueilPhotoArea"><img id="chefAccueilImg" class="chef-photo-accueil" style="display:none"><div id="chefAccueilPlaceholder" style="width:90px;height:90px;border-radius:50%;background:#fff;border:3px dashed #d40000;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#d40000">👨‍💼<br>Manassé</div></div><div style="flex:1;min-width:200px"><div style="font-weight:900;font-size:15px;color:#d40000" id="chefNameAccueil">Manassé Busomoke Jonh</div><div style="font-size:11px;color:#666;font-weight:700" id="chefRoleAccueil">Gérant Fondateur - Expert depuis 2018 - Matériel de Très Bonne Qualité</div><div style="font-size:11px;margin-top:4px;color:#222">✉️ manassebusomoke@gmail.com | 📘 Manassé busomoke jonh | 📞 0979060998 - Réponse 5 min 7j/7</div><div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap"><a href="https://wa.me/243979060998" target="_blank" style="background:#25D366;color:#fff;padding:5px 10px;border-radius:20px;text-decoration:none;font-weight:800;font-size:10px">💬 WhatsApp Chef</a><a href="mailto:manassebusomoke@gmail.com" style="background:#111;color:#fff;padding:5px 10px;border-radius:20px;text-decoration:none;font-weight:800;font-size:10px">✉️ Email Manassé</a><a href="https://www.facebook.com/search/top/?q=Manassé%20busomoke%20jonh" target="_blank" style="background:#1877F2;color:#fff;padding:5px 10px;border-radius:20px;text-decoration:none;font-weight:800;font-size:10px">📘 Facebook Manassé</a></div></div></div>
+<div class="wa-direct-box"><div style="font-size:24px">💬</div><div><div style="font-weight:800;font-size:13.5px">Contact direct Chef Manassé via WhatsApp - Réponse 5 min 7j/7 - Email: manassebusomoke@gmail.com - Facebook: Manassé busomoke jonh</div><a href="https://wa.me/243979060998" target="_blank" style="display:inline-block;background:#fff;color:#25D366;padding:7px 14px;border-radius:20px;text-decoration:none;font-weight:800;font-size:11px;margin-top:6px">💬 WhatsApp Chef Manassé - Réponse Immédiate</a></div></div>
+<div class="hero"><div style="flex:2;min-width:300px"><h1 id="heroTitle" style="font-size:23px;font-weight:900;line-height:1.3">MAT MED LUBUMBASHI | Manassé Busomoke Jonh | Matériel Médical Original CE - Depuis 2019 - N°1 au Katanga</h1><div id="heroDesc" style="font-size:12.5px;line-height:1.8;margin-top:12px">Depuis 2019, MAT MED LUBUMBASHI, dirigé par Manassé Busomoke Jonh, est le fournisseur de référence en matériel médical de très bonne qualité pour les professionnels de santé du Grand Katanga.<br><br><b>Notre engagement:</b> du matériel 100% ORIGINAL certifié CE, importé directement d'usine, testé à 100% avant livraison. Pas de copie, pas de compromis.<br><br><b>CE QUE VOUS GAGNEZ:</b><br>✓ Qualité garantie: Acier inoxydable chirurgical, appareils calibrés, précision médicale<br>✓ Économie réelle: Prix d'usine direct, 20 à 40% moins cher que les revendeurs locaux<br>✓ Sécurité totale: Garantie 1 an + Facture + Formation gratuite<br>✓ Service rapide: Livraison gratuite 24h à Lubumbashi dès 50$, paiement à la livraison<br>✓ Confiance: 3500+ clients satisfaits - Hôpitaux, cliniques, infirmiers - Note 4.9/5<br><br>Ne mettez plus la santé de vos patients en risque avec du matériel douteux. Choisissez l'original. Choisissez MAT MED.<br><br><b>Contact direct Chef Manassé - 5 min 7j/7:</b> 0979060998 | manassebusomoke@gmail.com | Facebook: Manassé busomoke jonh | Route Kasapa,Référence Home 10 Lubumbashi - HONEST SINCERITY RESPECT</div></div><div style="background:#fff;border-radius:14px;padding:14px;min-width:270px;color:#222;text-align:center"><div id="heroLogoArea"><img id="heroLogoImg" style="width:70px;height:70px;object-fit:contain;display:none;margin:0 auto"><div id="heroLogoPlaceholder" style="width:70px;height:70px;background:#f8f9fa;border:2px dashed #ddd;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:10px">📸 LOGO</div></div><div style="margin-top:10px;background:#111;color:#fff;padding:11px;border-radius:10px;text-align:left"><div style="font-weight:800;font-size:11px">📍 Contact Manassé - Direct</div><div style="font-size:10.5px;margin-top:5px">Route kasapa<br>Lubumbashi<br>✉️ manassebusomoke@gmail.com<br>📘 Manassé busomoke jonh</div><div style="margin-top:8px"><div style="font-weight:800;font-size:11px;color:#25D366">💬 0979060998</div><a href="https://wa.me/243979060998" target="_blank" style="display:block;background:#25D366;color:#fff;padding:7px;border-radius:20px;text-decoration:none;font-size:10px;font-weight:800;margin-top:5px;text-align:center">💬 WhatsApp Chef - 5 min</a></div></div></div></div>
+<div class="section"><h3 style="font-weight:800">Produits phares - Matériel de Très Bonne Qualité - Original CE Garanti</h3><div class="products" id="productsAccueil" style="margin-top:12px"></div></div>
+</div>
+
+<div id="diagnostic" class="main" style="display:none"><div class="section"><h2 style="color:#d40000;font-weight:800">🩺 Diagnostic</h2></div><div class="section"><div class="products" id="productsDiag"></div></div></div>
+<div id="chirurgie" class="main" style="display:none"><div class="section"><h2 style="color:#d40000;font-weight:800">🔪 Chirurgie</h2></div><div class="section"><div class="products" id="productsChir"></div></div></div>
+<div id="produitsSec" class="main" style="display:none"><div class="section"><h2 style="color:#d40000;font-weight:800">🛍️ Tous les produits</h2></div><div class="products" id="products"></div></div>
+
+<div id="contact" class="main" style="display:none">
+<div class="chef-card"><div id="chefContactPhotoArea"><img id="chefContactImg" class="chef-photo" style="display:none"><div id="chefContactPlaceholder" style="width:130px;height:130px;border-radius:50%;background:#f5f6f8;border:3px dashed #d40000;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#d40000">👨‍💼<br>Photo<br>Manassé</div></div><div style="flex:1;min-width:260px"><h2 style="font-weight:900;font-size:19px;color:#d40000" id="chefNameContact">Manassé Busomoke Jonh</h2><p style="font-size:12px;color:#666;margin-top:3px;font-weight:700" id="chefRoleContact">Gérant Fondateur - Expert depuis 2019</p><p style="font-size:11.5px;margin-top:8px;line-height:1.6" id="chefBioContact">Depuis 2019, matériel 100% ORIGINAL CE, testé 100%, garantie 1 an. Email: manassebusomoke@gmail.com - Facebook: Manassé busomoke jonh - Matériel de très bonne qualité.</p><div class="chef-coord"><div style="font-weight:900;font-size:12px;margin-bottom:8px">📞 Coordonnées directes Chef Manassé:</div><div class="coord-item"><span style="background:#25D366;color:#fff;padding:4px 8px;border-radius:20px;font-size:10px">💬</span><b>WhatsApp:</b> <a href="https://wa.me/243979060998" target="_blank" style="color:#25D366;text-decoration:none;font-weight:800">0979060998 - Réponse 5 min</a></div><div class="coord-item"><span style="background:#1877F2;color:#fff;padding:4px 8px;border-radius:20px;font-size:10px">✉️</span><b>Email:</b> <a href="mailto:manassebusomoke@gmail.com" style="color:#fff;text-decoration:none;font-weight:800">manassebusomoke@gmail.com</a></div><div class="coord-item"><span style="background:#1877F2;color:#fff;padding:4px 8px;border-radius:20px;font-size:10px">📘</span><b>Facebook:</b> <a href="https://www.facebook.com/search/top/?q=Manassé%20busomoke%20jonh" target="_blank" style="color:#fff;text-decoration:none;font-weight:800">Manassé busomoke jonh</a></div><div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><a href="https://wa.me/243979060998" target="_blank" style="background:#25D366;color:#fff;padding:8px 14px;border-radius:20px;text-decoration:none;font-weight:800;font-size:11px">💬 WhatsApp Chef</a><a href="mailto:manassebusomoke@gmail.com" style="background:#fff;color:#111;padding:8px 14px;border-radius:20px;text-decoration:none;font-weight:800;font-size:11px">✉️ Email Manassé</a><a href="https://www.facebook.com/search/top/?q=Manassé%20busomoke%20jonh" target="_blank" style="background:#1877F2;color:#fff;padding:8px 14px;border-radius:20px;text-decoration:none;font-weight:800;font-size:11px">📘 Facebook Manassé</a></div></div></div></div>
+<div class="section"><iframe style="width:100%;height:320px;border:0;border-radius:12px" src="https://maps.google.com/maps?q=Lubumbashi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></div>
+</div>
+
+<div id="modeLogin" style="display:none"><div class="login-box"><div style="font-size:48px">🔒</div><h2 style="margin-top:10px;font-weight:800">Espace Chef Manassé</h2><input type="password" id="passInput" class="pro-input" placeholder="Mot de passe *"><button class="admin-btn" onclick="checkPass()">🔓 Déverrouiller</button><p style="font-size:10px;color:#999;margin-top:10px"><b></b></p><button style="background:#f5f6f8;color:#333;border:1px solid #eee;padding:9px;border-radius:25px;margin-top:12px;width:100%" onclick="switchSite()"></button><div id="loginError" style="color:#d40000;font-size:11px;margin-top:10px;display:none">❌ Incorrect</div></div></div>
+
+<div id="modeAdmin" style="display:none">
+<div class="nav" style="background:#111"><button class="active" style="background:#d40000;color:#fff" onclick="tabA('commandes',event)">📦 Commandes (<span id="cc">0</span>)</button><button onclick="tabA('ajoutProduit',event)" style="background:#25D366;color:#fff">➕ Produit</button><button onclick="tabA('stock',event)">📦 Stock</button><button onclick="tabA('securite',event)" style="background:#8b0000;color:#ffd700">🔐 Sécurité</button><button onclick="tabA('chefEdit',event)" style="background:#d40000;color:#fff">👨‍💼 Chef Accueil+Contact</button><button onclick="tabA('logoEdit',event)" style="background:#111;color:#ffd700">📸 Logo</button><button onclick="tabA('accueilEdit',event)" style="background:#1877F2;color:#fff">🏠 Textes Accueil</button><button onclick="switchSite()" style="background:#25D366;color:#fff">🏠 Site Client</button><button onclick="logout()" style="background:#d40000;color:#fff">🔒 Déco</button></div>
+
+<div id="commandes" class="page-col active">
+<div class="admin-card" style="border:3px solid #d40000">
+<h3 style="font-weight:900;color:#d40000">📦 Commandes - Manassé Busomoke Jonh - Alerte Améliorée Activée</h3>
+<p style="font-size:11px;color:#666">Email: manassebusomoke@gmail.com - Facebook: Manassé busomoke jonh - Alerte son + vibration + bulle rouge 12 sec + notification navigateur</p>
+<div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+<button class="admin-btn" style="flex:1;background:#111" onclick="loadCmd()">🔄 Actualiser commandes</button>
+<button class="admin-btn" style="flex:1;background:#78a8e6" onclick="activerNotifications()">🔔 Activer alertes sonores + notifications</button>
+<button class="admin-btn" style="flex:1;background:#567dc7" onclick="testerAlerte()">🧪 Tester alerte commande</button>
+</div>
+<div style="background:#fff3cd;border:1px solid #ffd700;border-radius:10px;padding:10px;margin-top:10px;font-size:11px">
+<b>🔔 Comment alerte fonctionne quand client commande:</b><br>
+1. 🔊 Son de cloche joue automatiquement<br>
+2. 📳 Téléphone vibre 3 fois (mobile)<br>
+3. 🚨 Bulle rouge en haut à droite 12 secondes avec nom client + paiement + total<br>
+4. 📦 Commande sauvegardée ici automatiquement + compteur clignote jaune<br>
+5. 📲 WhatsApp s'ouvre automatiquement avec message complet + email + Facebook Chef<br>
+6. 🔔 Si tu as activé notifications: Notification Windows/Android même si tu n'es pas sur site!
+7. 🔔 C'est mieux de l'active pour recevoir des notifications des tes client au cas ils ont besoin. merci!
+</div>
+</div>
+<div id="listCmd"></div>
+</div>
+
+<div id="ajoutProduit" class="page-col"><div class="admin-card" style="border:3px solid #25D366"><h3 style="font-weight:800;color:#25D366">➕ Ajouter nouveau produit + prix - Chef Manassé</h3><div style="background:#f0fff4;border:2px dashed #25D366;border-radius:12px;padding:14px;margin-top:12px"><div style="text-align:center;margin-bottom:12px"><img id="newProdPreview" style="width:150px;height:150px;object-fit:contain;background:#fff;border-radius:10px;border:2px dashed #25D366;display:none;margin:0 auto"><div id="newProdPlaceholder" style="width:150px;height:150px;background:#fff;border:2px dashed #25D366;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:11px;font-weight:700;color:#25D366">📸 Photo produit</div><input type="file" id="newProdFile" accept="image/*" style="display:none" onchange="previewNewProd(event)"><button class="admin-btn" style="background:#25D366;margin-top:8px" onclick="document.getElementById('newProdFile').click()">📸 Choisir photo depuis galerie téléphone</button></div><input id="newProdName" class="pro-input" placeholder="Nom produit *"><div style="display:flex;gap:7px"><div style="flex:1"><input id="newProdPrice" type="number" class="pro-input" placeholder="Prix *"></div><div style="flex:0.6"><select id="newProdDevise" class="pro-input"><option value="$">$</option><option value="FC">FC</option></select></div><div style="flex:1"><input id="newProdOld" type="number" class="pro-input" placeholder="Ancien"></div></div><div style="display:flex;gap:7px"><div style="flex:1"><select id="newProdCat" class="pro-input"><option value="diagnostic">🩺 Diagnostic</option><option value="chirurgie">🔪 Chirurgie</option><option value="consommables">🧤 Consommables</option></select></div><div style="flex:1"><input id="newProdPromo" class="pro-input" placeholder="Promo -25%"></div></div><button class="admin-btn" style="background:linear-gradient(135deg,#25D366,#128C7E)" onclick="ajouterNouveauProduit()">➕ AJOUTER PRODUIT - Visible instantanément</button></div><div style="margin-top:14px"><h4 style="font-weight:800">📦 Derniers ajoutés</h4><div id="lastAddedList"></div></div></div></div>
+<div id="stock45" class="page-col"><div class="admin-card"><h3 style="font-weight:800">📦 Stock produits</h3><div style="display:flex;gap:7px"><button class="admin-btn" style="flex:1;background:#111" onclick="loadStock45()">🔄 Charger produits + images</button><button class="admin-btn" style="flex:1;background:#25D366" onclick="saveStock45()">💾 Sauver tout</button></div><div id="stockGrid" class="stock-grid" style="margin-top:10px"></div></div></div>
+<div id="securite" class="page-col">
+<div class="admin-card" style="border:3px solid #8b0000">
+<h3 style="font-weight:900;color:#8b0000">🔐 Sécurité - Mot de passe Chef</h3>
+<p style="font-size:11px;color:#666;margin:8px 0">Cette partie permet de modifier le mot de passe utilisé pour l'accès Chef et les suppressions.</p>
+<input id="oldPassSecurity" type="password" class="pro-input" placeholder="Ancien mot de passe">
+<input id="newPassSecurity" type="password" class="pro-input" placeholder="Nouveau mot de passe">
+<input id="confirmPassSecurity" type="password" class="pro-input" placeholder="Confirmer le nouveau mot de passe">
+<button class="admin-btn" style="background:#8b0000" onclick="changeChefPassword()">🔑 Modifier le mot de passe</button>
+<button class="admin-btn" style="background:#111;color:#ffd700" onclick="testDeleteProtection()">🧪 Tester le mot de passe</button>
+</div>
+</div>
+<div id="chefEdit" class="page-col"><div class="admin-card" style="border:3px solid #d40000"><h3 style="font-weight:900;color:#d40000">👨‍💼 Manassé Busomoke Jonh - Image visible Accueil + Contact</h3><div style="text-align:center"><img id="chefEditPreview" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid #d40000;display:none;margin:10px auto"><div id="chefEditPlaceholder" style="width:160px;height:160px;border-radius:50%;background:#f8f9fa;border:3px dashed #d40000;display:flex;align-items:center;justify-content:center;margin:10px auto;font-weight:800;color:#d40000">👨‍💼 Photo Manassé</div><input type="file" id="chefFile" accept="image/*" onchange="uploadChef(event)" style="display:none"><button class="admin-btn" style="background:#d40000" onclick="document.getElementById('chefFile').click()">📸 Choisir image Chef Manassé - Visible Accueil + Contact</button><input id="edit_chef_name" class="pro-input" value="Manassé Busomoke Jonh"><input id="edit_chef_role" class="pro-input" value="Gérant Fondateur - Expert depuis 2018"><textarea id="edit_chef_bio" class="pro-input" style="height:80px">Depuis 2018, matériel 100% ORIGINAL CE, testé 100%, garantie 1 an. Email: manassebusomoke@gmail.com - Facebook: Manassé busomoke jonh</textarea><input id="edit_chef_wa" class="pro-input" value="243979060998"><input id="edit_chef_phone" class="pro-input" value="0979060998"><input id="edit_chef_adr" class="pro-input" value="Av. Liberté, Lubumbashi"><input id="edit_chef_email" class="pro-input" value="manassebusomoke@gmail.com"><input id="edit_chef_fb" class="pro-input" value="Manassé busomoke jonh"></div><button class="admin-btn" style="background:linear-gradient(135deg,#d40000,#8b0000);margin-top:10px" onclick="saveChefWithCoords()">💾 Sauver Chef Manassé</button></div></div>
+<div id="logoEdit" class="page-col"><div class="admin-card" style="border:3px solid #111"><h3 style="font-weight:900">📸 Logo Mat Med - Corrigé</h3><div style="text-align:center"><img id="logoEditPreview" style="width:180px;height:180px;object-fit:contain;background:#f8f9fa;border-radius:12px;display:none;margin:10px auto"><div id="logoEditPlaceholder" style="width:180px;height:180px;background:#f8f9fa;border:2px dashed #ddd;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:10px auto">📸 Logo</div><input type="file" id="logoFile" accept="image/*" style="display:none" onchange="uploadLogo(event)"><button class="admin-btn" style="background:#111" onclick="document.getElementById('logoFile').click()">📸 Choisir nouveau logo</button><button class="admin-btn" style="background:linear-gradient(90deg,#111,#d40000)" onclick="saveLogo()">💾 Sauver logo</button></div></div></div>
+<div id="accueilEdit" class="page-col"><div class="admin-card" style="border:3px solid #1877F2"><h3 style="font-weight:900;color:#1877F2">🏠 Textes Page d'Accueil - Modifier par Chef Manassé</h3><div style="background:#f0f8ff;border:2px dashed #1877F2;border-radius:12px;padding:14px;margin-top:12px"><h4 style="font-weight:800;color:#1877F2">💯 Boîte Qualité</h4><input id="edit_qualiteTitle" class="pro-input" placeholder="Titre qualité"><textarea id="edit_qualiteDesc" class="pro-input" style="height:110px" placeholder="Description qualité"></textarea><h4 style="font-weight:800;color:#d40000;margin-top:14px">🔴 Hero Rouge - Titre Principal</h4><textarea id="edit_heroTitle" class="pro-input" style="height:60px" placeholder="Titre principal"></textarea><h4 style="font-weight:800;color:#d40000;margin-top:10px">🔴 Hero - Description Pro Combinée</h4><textarea id="edit_heroDesc" class="pro-input" style="height:220px" placeholder="Description longue"></textarea><div style="display:flex;gap:8px;margin-top:12px"><button class="admin-btn" style="flex:1;background:#111" onclick="resetTextesPro()">🔄 Remettre texte pro par défaut</button><button class="admin-btn" style="flex:2;background:linear-gradient(135deg,#1877F2,#0d5cb6);font-size:13px;padding:14px" onclick="saveAccueil()">💾 SAUVER TEXTES ACCUEIL</button></div></div></div></div>
+</div>
+
+<div class="cart-overlay" id="overlay" onclick="closeCart()"></div><div class="cart-drawer" id="drawer"><div class="cart-header"><h3 style="font-weight:800">🛒 Panier (<span id="cart2">0</span>)</h3><span onclick="closeCart()" style="cursor:pointer">✕</span></div><div class="cart-items" id="cartItems"></div><div class="cart-footer"><div style="display:flex;justify-content:space-between;font-weight:800"><span>Total:</span><span id="total">0</span></div><input id="c_nom" class="pro-input" placeholder="Nom *"><input id="c_tel" class="pro-input" placeholder="Tel *"><input id="c_adr" class="pro-input" placeholder="Adresse *"><select id="c_pay" class="pro-input"><option value="Cash à la livraison">💵 Cash à la livraison</option><option value="Airtel Money">📱 Airtel Money</option><option value="Orange Money">📱 Orange Money</option><option value="M-Pesa">📱 M-Pesa</option></select><button class="checkout-btn" onclick="commanderTout()">📲 Commander via WhatsApp Chef Manassé</button></div></div>
+<div class="whatsapp-float"><a href="https://wa.me/243979060998" target="_blank" class="wa-btn" style="background:#25D366">💬</a><a href="tel:0979060998" class="wa-btn" style="background:#111;font-size:15px">📞</a></div>
+
+<audio id="notifSound" preload="auto"><source src="https://assets.mixkit.co/sfx/preview/mixkit-bell-notification-933.mp3" type="audio/mpeg"></audio>
+
+<script>
+let panier=JSON.parse(localStorage.getItem('matmed_panier')||'[]');
+let base45=[{n:"Tensiomètre GK102 Vocal 75.000FC - Original CE - Très Bonne Qualité",p:75000,old:95000,d:"FC",i:"img1",pr:"-21%",cat:"diagnostic"},{n:"Bandelettes 14 Paramètres 30.000FC - Très Bonne Qualité",p:30000,old:40000,d:"FC",i:"img2",pr:"-25%",cat:"diagnostic"},{n:"Oxymètre Bluetooth 20$ - Très Bonne Qualité",p:20,old:28,d:"$",i:"img3",pr:"-29%",cat:"diagnostic"},{n:"Stéthoscope Double Pavillon 35.000FC - Très Bonne Qualité",p:35000,old:45000,d:"FC",i:"img4",pr:"-22%",cat:"diagnostic"},{n:"Gants Latex 11.000FC - 100pcs - Très Bonne Qualité",p:11000,old:15000,d:"FC",i:"img6",pr:"-27%",cat:"consommables"},{n:"Littmann Classic II 35$ Original CE - Très Bonne Qualité",p:35,old:45,d:"$",i:"img35",pr:"-22%",cat:"diagnostic"}];
+let produits=JSON.parse(localStorage.getItem('matmed_produits')||'null')||base45;
+let imgs=JSON.parse(localStorage.getItem('matmed_images')||'{}');
+let logoData=localStorage.getItem('matmed_logo')||'';
+let chefData=JSON.parse(localStorage.getItem('matmed_chef')||'null')||{photo:'',name:'Manassé Busomoke Jonh',role:'Gérant Fondateur Mat Med Lubumbashi - Expert depuis 2018 - Matériel de Très Bonne Qualité',bio:'Depuis 2018, matériel 100% ORIGINAL CE, testé 100%, garantie 1 an. Email: manassebusomoke@gmail.com - Facebook: Manassé busomoke jonh - Matériel de très bonne qualité - Vous ne serez pas déçu.',wa:'243979060998',phone:'0979060998',adr:'Av. Liberté, Lubumbashi',email:'manassebusomoke@gmail.com',fb:'Manassé busomoke jonh'};
+let chefPass=localStorage.getItem('chef_pass')||'matmed2024';
+let isLogged=sessionStorage.getItem('chef_logged')==='1';
+let social=JSON.parse(localStorage.getItem('matmed_social')||'{"wa":"243979060998","fb":"https://www.facebook.com/search/top/?q=Manassé%20busomoke%20jonh","email":"manassebusomoke@gmail.com","phone":"0979060998"}');
+let adresse=JSON.parse(localStorage.getItem('matmed_adresse')||'{"short":"Route , Lubumbashi","full":"Route Kasapa, Lubumbashi","details":"Route Kasapa, Lubumbashi","maps":"https://maps.google.com/?q=Lubumbashi","phone":"0979060998"}');
+let tempLogo='',tempChef='',tempNewProd='';
+let defaultTextesPro = {
+qualiteTitle: "MATÉRIEL DE TRÈS BONNE QUALITÉ - Notre Signature Depuis 2019. Vous Ne Serez Pas Déçu.",
+qualiteDesc: "Je suis Manassé Busomoke Jonh, gérant fondateur de MAT MED LUBUMBASHI. Ma promesse est simple: chaque tensiomètre, chaque stéthoscope Littmann, chaque oxymètre que vous achetez est 100% ORIGINAL certifié CE, importé directement d'usine, testé à 100% par mes soins avant livraison, avec facture + garantie 1 an écrite. C'est l'engagement qui a convaincu 3500+ infirmiers, médecins et hôpitaux du Katanga depuis 2018. Note 4.9/5. Contact direct Chef: 0979060998 | manassebusomoke@gmail.com | Facebook: Manassé busomoke jonh",
+heroTitle: "MAT MED LUBUMBASHI | Manassé Busomoke Jonh | Matériel Médical Original CE - Depuis 2019 - N°1 au Katanga",
+heroDesc: "Depuis 2019, MAT MED LUBUMBASHI, dirigé par Manassé Busomoke Jonh, est le fournisseur de référence en matériel médical de très bonne qualité pour les professionnels de santé du Grand Katanga.\n\nNotre engagement: du matériel 100% ORIGINAL certifié CE, importé directement d'usine, testé à 100% avant livraison. Pas de copie, pas de compromis.\n\nCE QUE VOUS GAGNEZ:\n✓ Qualité garantie: Acier inoxydable chirurgical, appareils calibrés, précision médicale\n✓ Économie réelle: Prix d'usine direct, 20 à 40% moins cher que les revendeurs locaux\n✓ Sécurité totale: Garantie 1 an + Facture + Formation gratuite\n✓ Service rapide: Livraison gratuite 24h à Lubumbashi dès 50$, paiement à la livraison\n✓ Confiance: 3500+ clients satisfaits - Hôpitaux, cliniques, infirmiers - Note 4.9/5\n\nNe mettez plus la santé de vos patients en risque avec du matériel douteux. Choisissez l'original. Choisissez MAT MED.\n\nContact direct Chef Manassé - 5 min 7j/7: 0979060998 | manassebusomoke@gmail.com | Facebook: Manassé busomoke jonh | Route Kasapa, Lubumbashi - HONEST SINCERITY RESPECT"
+};
+let textes = JSON.parse(localStorage.getItem('matmed_textes')||'null') || defaultTextesPro;
+
+function loadInitial(){
+if(logoData){document.getElementById('logoImg').src=logoData;document.getElementById('logoImg').style.display='block';document.getElementById('logoPlaceholder').style.display='none';document.getElementById('heroLogoImg').src=logoData;document.getElementById('heroLogoImg').style.display='block';document.getElementById('heroLogoPlaceholder').style.display='none';document.getElementById('logoEditPreview').src=logoData;document.getElementById('logoEditPreview').style.display='block';document.getElementById('logoEditPlaceholder').style.display='none';}
+if(chefData.photo){document.getElementById('chefContactImg').src=chefData.photo;document.getElementById('chefContactImg').style.display='block';document.getElementById('chefContactPlaceholder').style.display='none';document.getElementById('chefAccueilImg').src=chefData.photo;document.getElementById('chefAccueilImg').style.display='block';document.getElementById('chefAccueilPlaceholder').style.display='none';document.getElementById('chefEditPreview').src=chefData.photo;document.getElementById('chefEditPreview').style.display='block';document.getElementById('chefEditPlaceholder').style.display='none';}
+document.getElementById('chefNameContact').textContent=chefData.name;document.getElementById('chefRoleContact').textContent=chefData.role;document.getElementById('chefBioContact').textContent=chefData.bio;
+document.getElementById('chefNameAccueil').textContent=chefData.name;document.getElementById('chefRoleAccueil').textContent=chefData.role;
+document.getElementById('qualiteTitle').textContent = textes.qualiteTitle || defaultTextesPro.qualiteTitle;
+document.getElementById('qualiteDesc').textContent = textes.qualiteDesc || defaultTextesPro.qualiteDesc;
+document.getElementById('heroTitle').textContent = textes.heroTitle || defaultTextesPro.heroTitle;
+document.getElementById('heroDesc').innerHTML = (textes.heroDesc || defaultTextesPro.heroDesc).replace(/\n/g,'<br>');
+}
+function showSection(id,evt){document.querySelectorAll('.main').forEach(m=>m.style.display='none');document.getElementById(id).style.display='block';document.querySelectorAll('#mainNav button:not(.chef-btn)').forEach(b=>b.classList.remove('active'));if(evt) evt.target.classList.add('active');if(id==='produitsSec') render(produits,'products');if(id==='diagnostic') render(produits.filter(p=>p.cat==='diagnostic'),'productsDiag');if(id==='chirurgie') render(produits.filter(p=>p.cat==='chirurgie'),'productsChir');if(id==='accueil') render(produits.slice(0,8),'productsAccueil');}
+function tryAdmin(){if(isLogged){switchAdmin()}else{document.querySelectorAll('.main').forEach(m=>m.style.display='none');document.getElementById('modeAdmin').style.display='none';document.getElementById('modeLogin').style.display='block';}}
+function checkPass(){let p=document.getElementById('passInput').value;if(p===chefPass){sessionStorage.setItem('chef_logged','1');isLogged=true;document.getElementById('loginError').style.display='none';switchAdmin()}else{document.getElementById('loginError').style.display='block';}}
+function switchAdmin(){document.querySelectorAll('.main').forEach(m=>m.style.display='none');document.getElementById('modeLogin').style.display='none';document.getElementById('modeAdmin').style.display='block';loadCmd();loadStock45();loadChefEdit();loadLastAdded();loadLogoEdit();loadAccueilEdit();}
+function switchSite(){document.getElementById('modeAdmin').style.display='none';document.getElementById('modeLogin').style.display='none';document.getElementById('accueil').style.display='block';document.querySelectorAll('#mainNav button').forEach((b,i)=>{b.classList.remove('active');if(i===0)b.classList.add('active')});render(produits,'products');render(produits.slice(0,8),'productsAccueil');loadInitial();}
+function logout(){sessionStorage.removeItem('chef_logged');isLogged=false;switchSite();}
+function tabA(id,evt){document.querySelectorAll('.page-col').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('#modeAdmin .nav button').forEach(b=>b.classList.remove('active'));if(evt) evt.target.classList.add('active');}
+function saveProd(){localStorage.setItem('matmed_produits',JSON.stringify(produits));}
+function render(list,targetId){let cont=document.getElementById(targetId||'products');if(!cont)return;let wa=social.wa||'243979060998';cont.innerHTML=list.map((p)=>{let src=imgs[p.i]||'';let idx=produits.indexOf(p);let imgTag=src?`<img src="${src}">`:`<div style="height:175px;display:flex;align-items:center;justify-content:center;background:#f8f9fa;color:#999;font-size:11px">📸 ${p.i}</div>`;let waMsg=`https://wa.me/${wa}?text=BONJOUR%20CHEF%20MANASSE%20-%20${encodeURIComponent(p.n)}`;return `<div class="card"><div class="badge">${p.pr}</div>${imgTag}<div class="card-body"><h4 style="font-size:11.5px;height:34px;overflow:hidden;font-weight:700">${p.n}</h4><div style="margin-top:5px"><span class="new">${p.p.toLocaleString()} ${p.d}</span> <span class="old">${p.old? p.old.toLocaleString()+' '+p.d:''}</span></div><button class="btn" onclick="addToCart(${idx})">🛒 Ajouter</button><a href="${waMsg}" target="_blank" class="btn-wa">💬 WhatsApp Chef</a></div></div>`}).join('');}
+function addToCart(i){let p=produits[i];let ex=panier.find(x=>x.n===p.n);if(ex){ex.q+=1}else{panier.push({...p,q:1})}localStorage.setItem('matmed_panier',JSON.stringify(panier));updateCart();openCart();}
+function updateCart(){let c=panier.reduce((a,b)=>a+b.q,0);document.getElementById('cart').textContent=c;document.getElementById('cart2').textContent=c;let t$=0,tFC=0;panier.forEach(p=>{if(p.d==='$')t$+=p.p*p.q;else tFC+=p.p*p.q});document.getElementById('total').textContent=t$+'$ / '+tFC+'FC';document.getElementById('cartItems').innerHTML=panier.length===0?'<div style="text-align:center;padding:35px;color:#999">Panier vide</div>':panier.map((p,i)=>`<div style="display:flex;gap:9px;padding:9px;border-bottom:1px solid #f0f0f0"><div style="width:50px;height:50px;background:#f8f9fa;display:flex;align-items:center;justify-content:center;border-radius:8px">${imgs[p.i]?`<img src="${imgs[p.i]}" style="width:50px;height:50px;object-fit:contain">`:'📸'}</div><div style="flex:1"><b style="font-size:11px">${p.n}</b><br><span style="font-size:11px;color:#d40000;font-weight:800">${p.p}${p.d} x ${p.q}</span><br><button onclick="changeQ(${i},-1)">-</button> ${p.q} <button onclick="changeQ(${i},1)">+</button></div><span onclick="removeItem(${i})" style="cursor:pointer">🗑️</span></div>`).join('');}
+function changeQ(i,d){panier[i].q+=d;if(panier[i].q<=0)panier.splice(i,1);localStorage.setItem('matmed_panier',JSON.stringify(panier));updateCart();}
+function removeItem(i){panier.splice(i,1);localStorage.setItem('matmed_panier',JSON.stringify(panier));updateCart();}
+function openCart(){document.getElementById('drawer').classList.add('open');document.getElementById('overlay').classList.add('open');updateCart();}
+function closeCart(){document.getElementById('drawer').classList.remove('open');document.getElementById('overlay').classList.remove('open');}
+
+// ALERTE COMMANDE AMÉLIORÉE - SON + VIBRATION + BULLE ROUGE 12 SEC + NOTIFICATION NAVIGATEUR - DÉJÀ INSÉRÉE
+function playNotif(payType,nom,total){
+try{
+document.getElementById('notifSound').play().catch(()=>{});
+if(navigator.vibrate) navigator.vibrate([300,100,300,100,500]);
+}catch(e){}
+
+let alertBox = document.getElementById('alertBox');
+document.getElementById('alertText').innerHTML = `
+<b style="font-size:13px">👤 ${nom}</b><br>
+<b style="color:#ffd700">${payType}</b> - ${total}<br>
+<span style="font-size:10px">📲 WhatsApp envoyé au Chef Manassé 0979060998 - Vérifie Espace Chef → Commandes</span><br>
+<span style="font-size:9px">✉️ manassebusomoke@gmail.com | 📘 Manassé busomoke jonh</span>
+`;
+alertBox.classList.add('show');
+alertBox.style.display = 'block';
+alertBox.style.background = payType.includes('Cash')? '#111' : '#25D366';
+
+setTimeout(()=>{alertBox.classList.remove('show');},12000);
+
+if("Notification" in window && Notification.permission === "granted"){
+new Notification("🚨 NOUVELLE COMMANDE MAT MED!", {
+body: `${nom} - ${payType} - ${total} - Chef Manassé Busomoke Jonh - Email: manassebusomoke@gmail.com`,
+icon: chefData.photo || logoData || ""
+});
+}
+
+let cc = document.getElementById('cc');
+if(cc){
+cc.style.background = '#ffd700';
+cc.style.color = '#d40000';
+cc.style.padding = '2px 8px';
+cc.style.borderRadius = '10px';
+cc.style.fontWeight = '900';
+setTimeout(()=>{cc.style.background='';cc.style.color='';cc.style.padding='';},3000);
+}
+}
+
+function commanderTout(){
+let nom=document.getElementById('c_nom').value.trim();
+let tel=document.getElementById('c_tel').value.trim();
+let adr=document.getElementById('c_adr').value.trim();
+let pay=document.getElementById('c_pay').value;
+
+if(!nom||!tel||!adr){
+alert('⚠️ Remplis Nom, Téléphone et Adresse * - Chef Manassé Busomoke Jonh');
+return
+}
+if(panier.length===0){
+alert('🛒 Panier vide - Ajoute d\'abord un produit - Matériel de très bonne qualité');
+return
+}
+
+let detail=panier.map(p=>`- ${p.n} x${p.q} = ${p.p*p.q}${p.d}`).join('%0A');
+let t$=panier.filter(p=>p.d==='$').reduce((a,b)=>a+b.p*b.q,0);
+let tFC=panier.filter(p=>p.d==='FC').reduce((a,b)=>a+b.p*b.q,0);
+let wa=social.wa||'243979060998';
+
+let cmds=JSON.parse(localStorage.getItem('matmed_commandes')||'[]');
+let newCmd = {
+id: Date.now(),
+date:new Date().toLocaleString('fr-FR'),
+nom: nom,
+tel: tel,
+adr: adr,
+pay: pay,
+panier:[...panier],
+total$:t$,
+totalFC:tFC,
+status: 'Nouvelle',
+emailChef: 'manassebusomoke@gmail.com',
+fbChef: 'Manassé busomoke jonh'
+};
+cmds.push(newCmd);
+localStorage.setItem('matmed_commandes',JSON.stringify(cmds));
+
+playNotif(pay,nom,`${t$}$ + ${tFC}FC`);
+
+let msg=`🚨 *NOUVELLE COMMANDE MAT MED LUBUMBASHI* 🚨%0A%0A👨‍💼 *Chef Manassé Busomoke Jonh*%0A✉️ Email: manassebusomoke@gmail.com%0A📘 Facebook: Manassé busomoke jonh%0A%0A👤 *Client:* ${nom}%0A📞 *Tél:* ${tel}%0A📍 *Adresse:* ${adr}%0A💳 *Paiement:* ${pay}%0A%0A🛒 *DÉTAILS - Matériel de Très Bonne Qualité:*%0A${detail}%0A%0A💰 *TOTAL:* ${t$}$ + ${tFC}FC%0A%0A⏰ *Date:* ${new Date().toLocaleString('fr-FR')}%0A📦 *Statut:* Nouvelle commande - À livrer%0A%0A✅ *Commande depuis site MAT MED*`;
+
+window.open('https://wa.me/'+wa+'?text='+msg,'_blank');
+
+panier=[];
+localStorage.setItem('matmed_panier',JSON.stringify(panier));
+updateCart();
+closeCart();
+
+if("Notification" in window && Notification.permission === "default"){
+Notification.requestPermission();
+}
+
+alert(`✅ Commande envoyée avec succès Chef Manassé!%0A%0A👤 ${nom}%0A💰 ${t$}$ + ${tFC}FC%0A💳 ${pay}%0A%0A📲 WhatsApp envoyé au 0979060998%0A📦 Sauvegardée dans Espace Chef → Commandes%0A✉️ manassebusomoke@gmail.com%0A📘 Manassé busomoke jonh`);
+}
+
+function activerNotifications(){
+if("Notification" in window){
+Notification.requestPermission().then(perm=>{
+if(perm==="granted"){
+alert('✅ Notifications activées Chef Manassé! Tu recevras alerte même quand tu n\'es pas sur la page - Son + vibration + bulle rouge - Email: manassebusomoke@gmail.com - Facebook: Manassé busomoke jonh');
+new Notification("✅ Alertes activées MAT MED", {body: "Manassé Busomoke Jonh - Tu recevras alerte pour chaque nouvelle commande client - Matériel de très bonne qualité - 0979060998"});
+}else{
+alert('❌ Notifications refusées - Tu verras seulement bulle rouge + son quand tu es sur le site - Chef Manassé');
+}
+});
+}
+if(navigator.vibrate){
+navigator.vibrate([200,100,200]);
+}
+try{
+document.getElementById('notifSound').play().then(()=>{console.log('Son activé OK');}).catch(()=>{});
+}catch(e){}
+}
+
+function testerAlerte(){
+playNotif("Airtel Money - TEST", "Client Test - Lubumbashi", "35$ + 75000FC");
+alert('🧪 Test alerte commande OK Chef Manassé! Si tu as vu bulle rouge + entendu son + vibration, alerte fonctionne 100% - Quand vrai client commandera, tu recevras même alerte + WhatsApp automatique au 0979060998');
+}
+
+function previewNewProd(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=x=>{tempNewProd=x.target.result;document.getElementById('newProdPreview').src=tempNewProd;document.getElementById('newProdPreview').style.display='block';document.getElementById('newProdPlaceholder').style.display='none';};r.readAsDataURL(f);}
+function ajouterNouveauProduit(){let name=document.getElementById('newProdName').value.trim();let price=parseInt(document.getElementById('newProdPrice').value);let devise=document.getElementById('newProdDevise').value;let oldP=parseInt(document.getElementById('newProdOld').value)||price+Math.round(price*0.2);let cat=document.getElementById('newProdCat').value;let promo=document.getElementById('newProdPromo').value.trim()||'-15%';if(!name||!price){alert('Remplis Nom et Prix *');return}if(!tempNewProd){alert('Choisis photo');return}let newId='img'+Date.now();let newProd={n:name,p:price,old:oldP,d:devise,i:newId,pr:promo,cat:cat};produits.push(newProd);imgs[newId]=tempNewProd;saveProd();localStorage.setItem('matmed_images',JSON.stringify(imgs));render(produits,'products');render(produits.slice(0,8),'productsAccueil');loadStock45();loadLastAdded();document.getElementById('newProdName').value='';document.getElementById('newProdPrice').value='';document.getElementById('newProdOld').value='';document.getElementById('newProdPromo').value='';tempNewProd='';document.getElementById('newProdPreview').style.display='none';document.getElementById('newProdPlaceholder').style.display='flex';document.getElementById('newProdFile').value='';alert('✅ Produit ajouté: '+name);}
+function loadLastAdded(){let cont=document.getElementById('lastAddedList');if(!cont)return;let last=produits.slice(-5).reverse();cont.innerHTML=last.length===0?'<div style="color:#999">Aucun</div>':last.map(p=>{let src=imgs[p.i]||'';let idx=produits.indexOf(p);return `<div style="display:flex;gap:9px;background:#fff;padding:9px;border-radius:10px;margin:5px 0;border:1px solid #f0f0f0"><div style="width:55px;height:55px;background:#f8f9fa;border-radius:8px;display:flex;align-items:center;justify-content:center">${src?`<img src="${src}" style="width:55px;height:55px;object-fit:contain">`:'📸'}</div><div style="flex:1"><b style="font-size:11px">${p.n}</b><br><span style="color:#d40000;font-weight:800">${p.p}${p.d}</span> - ${p.pr}</div><button onclick="supprimerProduit(${idx})" style="background:#d40000;color:#fff;border:none;padding:5px 9px;border-radius:8px;font-size:10px">🗑️</button></div>`}).join('');}
+function verifierMotDePasseAction(message){
+let p=prompt(message);
+if(p===null)return false;
+if(p!==chefPass){alert('❌ Mot de passe incorrect.');return false;}
+return true;
+}
+function supprimerProduit(idx){
+if(!isLogged){alert("🔒 Connecte-toi d'abord comme Chef.");return;}
+if(!verifierMotDePasseAction('🔐 Mot de passe Chef pour supprimer ce produit :'))return;
+if(!confirm('⚠️ Voulez-vous vraiment supprimer ce produit et son image ?'))return;
+let id=produits[idx].i;
+produits.splice(idx,1);
+delete imgs[id];
+saveProd();
+localStorage.setItem('matmed_images',JSON.stringify(imgs));
+render(produits,'products');
+render(produits.slice(0,8),'productsAccueil');
+loadStock45();
+loadLastAdded();
+alert('✅ Produit supprimé avec succès.');
+}
+function supprimerImageProduit(idx){
+if(!isLogged){alert("🔒 Connecte-toi d'abord comme Chef.");return;}
+let p=produits[idx];
+if(!p)return;
+if(!imgs[p.i]){alert("ℹ️ Ce produit n'a pas d'image.");return;}
+if(!verifierMotDePasseAction('🔐 Mot de passe Chef pour supprimer uniquement cette image :'))return;
+if(!confirm('Supprimer uniquement l’image de : '+p.n+' ?'))return;
+delete imgs[p.i];
+localStorage.setItem('matmed_images',JSON.stringify(imgs));
+loadStock45();
+render(produits,'products');
+render(produits.slice(0,8),'productsAccueil');
+loadLastAdded();
+alert('✅ Image supprimée. Le produit est conservé.');
+}
+function loadStock45(){
+let grid=document.getElementById('stockGrid');
+if(!grid)return;
+if(produits.length===0){grid.innerHTML='<div style="text-align:center;color:#999;padding:20px">Aucun produit dans le stock.</div>';return;}
+grid.innerHTML=produits.map((p,i)=>`<div class="stock-item ${imgs[p.i]?'has-img':''}">
+<div style="font-size:10px;font-weight:800;color:#d40000;display:flex;justify-content:space-between">#${i+1} - ${(p.cat||'produit').toUpperCase()}</div>
+<div onclick="document.getElementById('file-${i}').click()" style="cursor:pointer;margin-top:5px">${imgs[p.i]?`<img src="${imgs[p.i]}">`:`<div style="height:125px;background:#f8f9fa;display:flex;align-items:center;justify-content:center;font-size:11px;border-radius:8px">📸 Photo #${i+1}</div>`}</div>
+<input type="file" id="file-${i}" accept="image/*" style="display:none" onchange="uploadStockImg(${i},event)">
+<input id="name-${i}" value="${p.n}" class="pro-input" style="font-size:11px">
+<div style="display:flex;gap:5px"><input id="price-${i}" type="number" value="${p.p}" class="pro-input" style="flex:1"><select id="dev-${i}" class="pro-input" style="flex:0.6"><option value="$" ${p.d==='$'?'selected':''}>$</option><option value="FC" ${p.d==='FC'?'selected':''}>FC</option></select><select id="cat-${i}" class="pro-input" style="flex:0.9;font-size:10px"><option value="diagnostic" ${p.cat==='diagnostic'?'selected':''}>🩺 Diagnostic</option><option value="chirurgie" ${p.cat==='chirurgie'?'selected':''}>🔪 Chirurgie</option><option value="consommables" ${p.cat==='consommables'?'selected':''}>🧤 Consommables</option></select></div>
+<div style="display:flex;gap:5px"><input id="promo-${i}" value="${p.pr}" class="pro-input" style="flex:1"><input id="old-${i}" type="number" value="${p.old}" class="pro-input" style="flex:1"></div>
+<button onclick="saveOneStock(${i})" style="width:100%;background:#25D366;color:#fff;border:none;padding:6px;border-radius:8px;font-size:10px;margin-top:4px;font-weight:800">💾 Sauver #${i+1}</button>
+<button onclick="supprimerImageProduit(${i})" style="width:100%;background:#111;color:#ffd700;border:none;padding:6px;border-radius:8px;font-size:10px;margin-top:4px;font-weight:800">🖼️ Supprimer image #${i+1}</button>
+<button onclick="supprimerProduit(${i})" style="width:100%;background:#d40000;color:#fff;border:none;padding:6px;border-radius:8px;font-size:10px;margin-top:4px;font-weight:800">🗑️ Supprimer produit #${i+1}</button>
+</div>`).join('');
+}
+function uploadStockImg(i,e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=x=>{imgs[produits[i].i]=x.target.result;localStorage.setItem('matmed_images',JSON.stringify(imgs));loadStock45();render(produits,'products');};r.readAsDataURL(f);}
+function saveOneStock(i){produits[i].n=document.getElementById(`name-${i}`).value;produits[i].p=parseInt(document.getElementById(`price-${i}`).value)||produits[i].p;produits[i].d=document.getElementById(`dev-${i}`).value;produits[i].cat=document.getElementById(`cat-${i}`).value;produits[i].pr=document.getElementById(`promo-${i}`).value||produits[i].pr;produits[i].old=parseInt(document.getElementById(`old-${i}`).value)||produits[i].old;saveProd();render(produits,'products');alert('Sauvé #'+(i+1));}
+function saveStock45(){for(let i=0;i<produits.length;i++){if(document.getElementById(`name-${i}`)){produits[i].n=document.getElementById(`name-${i}`).value;produits[i].p=parseInt(document.getElementById(`price-${i}`).value)||produits[i].p;produits[i].d=document.getElementById(`dev-${i}`).value;produits[i].cat=document.getElementById(`cat-${i}`).value;produits[i].pr=document.getElementById(`promo-${i}`)?.value||produits[i].pr;produits[i].old=parseInt(document.getElementById(`old-${i}`)?.value)||produits[i].old;}}saveProd();render(produits,'products');alert('✅ Tous sauvés!');}
+function loadCmd(){let c=JSON.parse(localStorage.getItem('matmed_commandes')||'[]');document.getElementById('cc').textContent=c.length;document.getElementById('listCmd').innerHTML=c.length===0?'<div class="admin-card" style="text-align:center;color:#999">Aucune commande pour le moment - Quand client commande, tu verras ici + alerte sonore + vibration + bulle rouge + WhatsApp automatique au 0979060998 - Chef Manassé</div>':c.slice().reverse().map(x=>`<div class="admin-card" style="border-left:4px solid ${!x.pay.includes('Cash')?'#25D366':'#111'}"><b>👤 ${x.nom}</b> - ${x.date}<br><span style="background:${!x.pay.includes('Cash')?'#25D366':'#111'};color:#fff;padding:3px 8px;border-radius:10px;font-size:10px">${x.pay}</span> <span style="background:#ffd700;color:#111;padding:3px 8px;border-radius:10px;font-size:10px">${x.status||'Nouvelle'}</span><br><span style="font-size:11px">📞 ${x.tel} - 📍 ${x.adr}</span><div style="font-size:11px;background:#f8f9fa;padding:7px;border-radius:8px;margin-top:6px">${x.panier.map(p=>p.n+' x'+p.q+' = '+(p.p*p.q)+p.d).join('<br>')}</div><div style="font-weight:800;color:#d40000;margin-top:5px">TOTAL: ${x.total$}$ + ${x.totalFC}FC</div><div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"><a href="https://wa.me/${x.tel.replace(/[^0-9]/g,'')}" style="background:#25D366;color:#fff;padding:6px 10px;border-radius:20px;text-decoration:none;font-size:11px">📲 WhatsApp client</a><a href="tel:${x.tel}" style="background:#111;color:#fff;padding:6px 10px;border-radius:20px;text-decoration:none;font-size:11px">📞 Appeler client</a></div></div>`).join('');}
+function loadLogoEdit(){if(logoData){document.getElementById('logoEditPreview').src=logoData;document.getElementById('logoEditPreview').style.display='block';document.getElementById('logoEditPlaceholder').style.display='none';}else{document.getElementById('logoEditPreview').style.display='none';document.getElementById('logoEditPlaceholder').style.display='flex';}}
+function uploadLogo(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=x=>{tempLogo=x.target.result;document.getElementById('logoEditPreview').src=tempLogo;document.getElementById('logoEditPreview').style.display='block';document.getElementById('logoEditPlaceholder').style.display='none';};r.readAsDataURL(f);}
+function saveLogo(){let toSave=tempLogo||logoData;if(!toSave){alert('❌ Choisis d\'abord un logo');return}try{localStorage.setItem('matmed_logo',toSave);logoData=toSave;document.getElementById('logoImg').src=toSave;document.getElementById('logoImg').style.display='block';document.getElementById('logoPlaceholder').style.display='none';document.getElementById('heroLogoImg').src=toSave;document.getElementById('heroLogoImg').style.display='block';document.getElementById('heroLogoPlaceholder').style.display='none';document.getElementById('logoEditPreview').src=toSave;alert('✅ Logo sauvé! Corrigé!');}catch(err){alert('❌ Image trop grande - < 1MB');}}
+function loadChefEdit(){document.getElementById('edit_chef_name').value=chefData.name;document.getElementById('edit_chef_role').value=chefData.role;document.getElementById('edit_chef_bio').value=chefData.bio;document.getElementById('edit_chef_wa').value=chefData.wa||'243979060998';document.getElementById('edit_chef_phone').value=chefData.phone||'0979060998';document.getElementById('edit_chef_adr').value=chefData.adr||'Av. Liberté';document.getElementById('edit_chef_email').value=chefData.email||'manassebusomoke@gmail.com';document.getElementById('edit_chef_fb').value=chefData.fb||'Manassé busomoke jonh';if(chefData.photo){document.getElementById('chefEditPreview').src=chefData.photo;document.getElementById('chefEditPreview').style.display='block';document.getElementById('chefEditPlaceholder').style.display='none';}}
+function loadAccueilEdit(){document.getElementById('edit_qualiteTitle').value = textes.qualiteTitle || defaultTextesPro.qualiteTitle;document.getElementById('edit_qualiteDesc').value = textes.qualiteDesc || defaultTextesPro.qualiteDesc;document.getElementById('edit_heroTitle').value = textes.heroTitle || defaultTextesPro.heroTitle;document.getElementById('edit_heroDesc').value = textes.heroDesc || defaultTextesPro.heroDesc;}
+function saveAccueil(){let newTextes = {qualiteTitle: document.getElementById('edit_qualiteTitle').value.trim() || defaultTextesPro.qualiteTitle,qualiteDesc: document.getElementById('edit_qualiteDesc').value.trim() || defaultTextesPro.qualiteDesc,heroTitle: document.getElementById('edit_heroTitle').value.trim() || defaultTextesPro.heroTitle,heroDesc: document.getElementById('edit_heroDesc').value.trim() || defaultTextesPro.heroDesc};localStorage.setItem('matmed_textes', JSON.stringify(newTextes));textes = newTextes;document.getElementById('qualiteTitle').textContent = newTextes.qualiteTitle;document.getElementById('qualiteDesc').textContent = newTextes.qualiteDesc;document.getElementById('heroTitle').textContent = newTextes.heroTitle;document.getElementById('heroDesc').innerHTML = newTextes.heroDesc.replace(/\n/g,'<br>');alert('✅ Textes accueil sauvés! Visible instantanément');}
+function resetTextesPro(){if(!confirm('Remettre texte pro combiné par défaut?')) return;localStorage.setItem('matmed_textes', JSON.stringify(defaultTextesPro));textes = defaultTextesPro;loadInitial();loadAccueilEdit();alert('✅ Texte pro par défaut remis!');}
+function uploadChef(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=x=>{tempChef=x.target.result;document.getElementById('chefEditPreview').src=tempChef;document.getElementById('chefEditPreview').style.display='block';document.getElementById('chefEditPlaceholder').style.display='none';};r.readAsDataURL(f);}
+function saveChefWithCoords(){let toSave=tempChef||chefData.photo;if(!toSave){alert('❌ Choisis d\'abord image Chef');return}try{chefData={photo:toSave,name:document.getElementById('edit_chef_name').value||'Manassé Busomoke Jonh',role:document.getElementById('edit_chef_role').value||'Gérant Fondateur',bio:document.getElementById('edit_chef_bio').value||'Email: manassebusomoke@gmail.com',wa:document.getElementById('edit_chef_wa').value||'243979060998',phone:document.getElementById('edit_chef_phone').value||'0979060998',adr:document.getElementById('edit_chef_adr').value||'Av. Liberté',email:document.getElementById('edit_chef_email').value||'manassebusomoke@gmail.com',fb:document.getElementById('edit_chef_fb').value||'Manassé busomoke jonh'};localStorage.setItem('matmed_chef',JSON.stringify(chefData));social.wa=chefData.wa;social.phone=chefData.phone;social.email=chefData.email;social.fb=chefData.fb;adresse.full=chefData.adr;adresse.short=chefData.adr;adresse.phone=chefData.phone;localStorage.setItem('matmed_social',JSON.stringify(social));localStorage.setItem('matmed_adresse',JSON.stringify(adresse));loadInitial();alert('✅ Chef Manassé sauvé! Image visible Accueil + Contact - Email + Facebook déjà insérés!');}catch(err){alert('❌ Image trop grande - < 1MB');}}
+function changeChefPassword(){
+let oldP=document.getElementById('oldPassSecurity').value;
+let newP=document.getElementById('newPassSecurity').value;
+let confirmP=document.getElementById('confirmPassSecurity').value;
+if(oldP!==chefPass){alert('❌ Ancien mot de passe incorrect.');return;}
+if(newP.length<6){alert('❌ Le nouveau mot de passe doit contenir au moins 6 caractères.');return;}
+if(newP!==confirmP){alert('❌ Les deux mots de passe ne correspondent pas.');return;}
+chefPass=newP;
+localStorage.setItem('chef_pass',chefPass);
+document.getElementById('oldPassSecurity').value='';
+document.getElementById('newPassSecurity').value='';
+document.getElementById('confirmPassSecurity').value='';
+alert('✅ Mot de passe modifié avec succès.');
+}
+function testDeleteProtection(){
+let p=prompt('🧪 Entrez le mot de passe Chef :');
+if(p===null)return;
+alert(p===chefPass?'✅ Mot de passe correct.':'❌ Mot de passe incorrect.');
+}
+document.getElementById('search').addEventListener('input',e=>{render(produits.filter(p=>p.n.toLowerCase().includes(e.target.value.toLowerCase())),'products');});
+document.getElementById('passInput').addEventListener('keypress',e=>{if(e.key==='Enter')checkPass()});
+render(produits,'products');render(produits.slice(0,8),'productsAccueil');updateCart();loadInitial();
+</script>
+</body>
+</html>
